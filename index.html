@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <p class="card__label">ADVICE #<span id="advice-id">--</span></p>
+    <blockquote id="advice-text" class="card__text" aria-live="polite">Loading advice...</blockquote>
+
+    <picture class="card__divider">
+      <source media="(min-width: 600px)" srcset="./images/pattern-divider-desktop.svg">
+      <img src="./images/pattern-divider-mobile.svg" alt="">
+    </picture>
+
+    <button id="generate-btn" class="card__btn" type="button" aria-label="Get new advice">
+      <img src="./images/icon-dice.svg" alt="">
+    </button>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">USMAN ABDULLAHI SHEHU</a>
+  </footer>
+
+  <script src="script.js"></script> 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">USMAN ABDULLAHI SHEHU</a>
+  </footer>
+</body>
+</html>

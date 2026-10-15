@@ -1,0 +1,121 @@
+:root {
+  --blue-200: hsl(193, 38%, 86%);
+  --green-300: hsl(150, 100%, 66%);
+  --blue-900: hsl(217, 19%, 24%);
+  --blue-950: hsl(218, 23%, 16%);
+  --error: hsl(0, 100%, 75%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--blue-950);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+  padding: 2.5rem 1.5rem 4rem;
+  background: var(--blue-900);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 30px 60px hsla(218, 23%, 8%, 0.4);
+}
+
+.card__label {
+  color: var(--green-300);
+  font-size: 0.8125rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.5rem;
+}
+
+.card__text {
+  color: var(--blue-200);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.card__text.is-error {
+  color: var(--error);
+}
+
+.card__divider {
+  display: block;
+}
+
+.card__divider img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: var(--green-300);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+.card__btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.card__btn:hover:not(:disabled),
+.card__btn:focus-visible {
+  box-shadow: 0 0 40px var(--green-300);
+}
+
+.card__btn:focus-visible {
+  outline: 3px solid var(--blue-200);
+  outline-offset: 4px;
+}
+
+.card__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: var(--blue-200);
+  padding-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 70%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    padding: 3rem 3rem 4.5rem;
+  }
+
+  .card__text {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+}
